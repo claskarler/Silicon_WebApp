@@ -1,11 +1,119 @@
 .courses {
-    background-color: hotpink;
-    .container {
-        .header {
-            text-align: center;
+    padding-top: 3rem;
+    padding-bottom: 5rem;
 
-            h1 {
-                @include h1;
+    .container {
+        #form-filters {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        h1 {
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .course-items {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+
+            .course-box {
+                @include shadow-m;
+                border-radius: 10px;
+                position: relative;
+                
+
+                &:hover {
+                    transform: translateY(-3px);
+                    @include theme-shadow;
+                }
+
+                .course {
+                    position: relative;
+                    display: block;
+                    border-radius: 8px;
+                    overflow: hidden;
+                    text-decoration: none;
+                    box-shadow: 0 0 14px -4px $gray-500;
+                    color: $gray-700;
+                    
+
+                    .bestseller {
+                        background: $success;
+                        color: #ffff;
+                        padding: .2rem;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 5px;
+                        position: absolute;
+                        left: 10px;
+                        top: 10px;
+                    }
+
+                    .bookmark {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 50%;
+                        background: #fff;
+                        color: #000f;
+                        height: 36px;
+                        width: 36px;
+                        position: absolute;
+                        right: 10px;
+                        top: 10px;
+                        border: none;
+                        padding: .5rem;
+                    }
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                        border-top-left-radius: 10px;
+                        border-top-right-radius: 10px
+                    }
+
+                    .content {
+                        padding: 1rem;
+
+                        p {
+                            @include text-s;
+                            color: $gray-700;
+                            margin-bottom: .5rem;
+                        }
+
+                        .pricing {
+                            @include text-lg;
+                            color: $gray-700;
+                            font-weight: bold;
+                            display: flex;
+
+                            .discount {
+                                color: hotpink;
+                            }
+
+                            &.originalprice {
+                                text-decoration: line-through;
+                                color: $gray-700;
+                                @include text-s;
+                            }
+                        }
+
+                        &:hover {
+                            box-shadow: 0 0 14px -4px $gray-900;
+                        }
+                    }
+                }
             }
         }
     }

@@ -1023,19 +1023,114 @@ header .container .btn-mobile {
 }
 
 .courses {
-  background-color: hotpink;
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+}
+.courses .container #form-filters {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1.5rem;
 }
 .courses .container .header {
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
 }
-.courses .container .header h1 {
+.courses .container .course-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+.courses .container .course-items .course-box {
+  box-shadow: 0px 4px 9px -1px rgba(19, 16, 34, 0.03), 0px 4.4px 20px -1px rgba(19, 16, 34, 0.05);
+  border-radius: 10px;
+  position: relative;
+}
+.courses .container .course-items .course-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 8px 18px -8px rgba(99, 102, 241, 0.9);
+}
+.courses .container .course-items .course-box .course {
+  position: relative;
+  display: block;
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none;
+  box-shadow: 0 0 14px -4px #B4B7C9;
+  color: #565973;
+}
+.courses .container .course-items .course-box .course .bestseller {
+  background: #22C55E;
+  color: white;
+  padding: 0.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+.courses .container .course-items .course-box .course .bookmark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background: #fff;
+  color: black;
+  height: 36px;
+  width: 36px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border: none;
+  padding: 0.5rem;
+}
+.courses .container .course-items .course-box .course img {
+  width: 100%;
+  height: auto;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.courses .container .course-items .course-box .course .content {
+  padding: 1rem;
+}
+.courses .container .course-items .course-box .course .content p {
   line-height: 160%;
   font-weight: 400;
   color: #565973;
   font-family: "Manrope", sans-serif;
-  font-weight: 800;
-  color: #0B0F19;
-  font-size: 40px !important;
+  font-size: 14px !important;
+  color: #565973;
+  margin-bottom: 0.5rem;
+}
+.courses .container .course-items .course-box .course .content .pricing {
+  line-height: 160%;
+  font-weight: 400;
+  color: #565973;
+  font-family: "Manrope", sans-serif;
+  font-size: 18px !important;
+  color: #565973;
+  font-weight: bold;
+  display: flex;
+}
+.courses .container .course-items .course-box .course .content .pricing .discount {
+  color: hotpink;
+}
+.courses .container .course-items .course-box .course .content .pricing.originalprice {
+  text-decoration: line-through;
+  color: #565973;
+  line-height: 160%;
+  font-weight: 400;
+  color: #565973;
+  font-family: "Manrope", sans-serif;
+  font-size: 14px !important;
+}
+.courses .container .course-items .course-box .course .content:hover {
+  box-shadow: 0 0 14px -4px #0B0F19;
 }
 
 .subscribe {
@@ -1062,13 +1157,68 @@ header .container .btn-mobile {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
-.subscribe .container form .email {
+.subscribe .container form .form-email {
   display: grid;
   align-items: start;
   grid-template-columns: 1fr auto;
   gap: 1.5rem;
 }
+.subscribe .container form .form-email .input-group {
+  position: relative;
+}
+.subscribe .container form .form-email .input-group i {
+  position: absolute;
+  left: 20px;
+  top: 17px;
+  font-size: 1.3rem;
+}
+.subscribe .container form .form-email .input-group .input {
+  padding-left: 33px;
+}
 
+#download-app {
+  background-color: #F3F6FF;
+}
+#download-app .container {
+  display: flex;
+  background-color: #EFF2FC;
+  justify-content: space-between;
+  padding: 6rem 1rem;
+}
+#download-app .container .download-image {
+  flex: 1;
+  position: relative;
+}
+#download-app .container .download-image .image-1 {
+  position: absolute;
+}
+#download-app .container .download-image .image-2 {
+  position: absolute;
+  left: 200px;
+  top: -50px;
+  border-radius: 20px;
+  box-shadow: -10px 0 20px rgba(0, 0, 0, 0.1);
+}
+#download-app .container .content {
+  flex: 1;
+}
+#download-app .container .content h1 {
+  width: 60%;
+}
+#download-app .container .content .download-app-group {
+  margin: 3rem 0;
+}
+#download-app .container .content .download-app-group .store {
+  color: #9397AD;
+}
+#download-app .container .content .download-app-group .rating i {
+  color: rgb(234, 199, 0);
+}
+#download-app .container .content .download-app-group .download {
+  width: 75%;
+  display: flex;
+  justify-content: space-between;
+}
 footer {
   padding: 50px 0 30px 0;
   line-height: 160%;
