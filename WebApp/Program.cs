@@ -2,12 +2,17 @@ using Microsoft.EntityFrameworkCore;
 using Infrastructure.Contexts;
 using Infrastructure.Entitites;
 using Microsoft.AspNetCore.Identity;
+using Infrastructure.Services;
 
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 
+
+builder.Services.AddHttpClient();
 builder.Services.AddDbContext<WebAppContext>(x => x.UseSqlServer(builder.Configuration.GetConnectionString("WebApp_Database")));
+builder.Services.AddScoped<CategoryService>();
+builder.Services.AddScoped<CourseService>();
 builder.Services.AddIdentity<UserEntity, IdentityRole>(x =>
 {
     x.SignIn.RequireConfirmedAccount = false;
